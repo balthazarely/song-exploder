@@ -1,7 +1,7 @@
 require("dotenv").config();
-const epxress = require("express");
+const express = require("express");
 const querystring = require("querystring");
-const app = epxress();
+const app = express();
 const axios = require("axios");
 const path = require("path");
 
@@ -11,11 +11,11 @@ const REDIRECT_URI = process.env.REDIRECT_URI;
 const FRONTEND_URI = process.env.FRONTEND_URI;
 const PORT = process.env.PORT || 8888;
 
-app.use(express.static(path.resolve(__dirname, "./client/build")));
-
 app.get("/", (req, res) => {
   res.send("hello world");
 });
+
+app.use(express.static(path.resolve(__dirname, "./client/build")));
 
 const generateRandomString = (length) => {
   let text = "";
