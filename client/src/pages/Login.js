@@ -5,7 +5,7 @@ const LOGIN_URI =
 
 const Login = () => (
   <>
-    <button href={LOGIN_URI}>Log in to Spotify</button>
+    <a href={LOGIN_URI}>Log in to Spotify</a>
   </>
 );
 
